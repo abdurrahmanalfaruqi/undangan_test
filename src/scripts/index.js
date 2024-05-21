@@ -2,6 +2,9 @@ window.addEventListener('DOMContentLoaded', function () {
 	const popupRekening = document.getElementById('popup-rekening');
 	const tampilRekening = document.getElementById('rekening');
 	const tutupRekening = document.getElementById('tutup-rekening');
+	const popuAlamat = document.getElementById('popu-alamat');
+	const tampilRekealamatning = document.getElementById('alamat');
+	const tutupAlamat = document.getElementById('tutup-alamat');
 
 	tampilRekening.addEventListener('click', (e) => {
 		e.preventDefault();
@@ -11,6 +14,15 @@ window.addEventListener('DOMContentLoaded', function () {
 	tutupRekening.addEventListener('click', (e) => {
 		popupRekening.classList.replace('grid', 'hidden');
 	});
+
+	tampilRekealamatning.addEventListener('click', (e) =>{
+		e.preventDefault();
+		popuAlamat.classList.replace('hidden', 'grid');
+	});
+	tutupAlamat.addEventListener('click', (e) => {
+		popuAlamat.classList.replace('grid', 'hidden');
+	});
+
 
 	const jumbotronGif = document.getElementById('jumbotron-gif');
 	jumbotronGif.addEventListener('ended', () => {
